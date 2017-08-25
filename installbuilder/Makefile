@@ -18,6 +18,7 @@ CONFIG_VERSION := 1.1.1
 
 ifeq ($(BUILD_OMS_VAL),1)
 SHORT_NAME=omsconfig
+SHORT_NAME_DSC=dsc
 LONG_NAME=Operations Management Suite Agent Configuration
 PROVIDES=dscpkg
 PROVIDERS=

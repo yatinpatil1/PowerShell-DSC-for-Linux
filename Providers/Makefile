@@ -80,20 +80,14 @@ PROVIDERS+=nxOMSAutomationWorker
 PROVIDERS+=nxOMSAgentNPMConfig
 PROVIDERS+=nxOMSAuditdPlugin
 else
-PROVIDERS:=nxFile
-PROVIDERS+=nxScript
-PROVIDERS+=nxUser
+PROVIDERS:=nxUser
 PROVIDERS+=nxGroup
 PROVIDERS+=nxService
 PROVIDERS+=nxPackage
-PROVIDERS+=nxEnvironment
-PROVIDERS+=nxSshAuthorizedKeys
 PROVIDERS+=nxIPAddress
 PROVIDERS+=nxComputer
 PROVIDERS+=nxFirewall
 PROVIDERS+=nxDNSServerAddress
-PROVIDERS+=nxFileLine
-PROVIDERS+=nxArchive
 PROVIDERS+=nxMySqlDatabase
 PROVIDERS+=nxMySqlGrant
 PROVIDERS+=nxMySqlUser
@@ -101,6 +95,14 @@ PROVIDERS+=nxAvailableUpdates
 PROVIDERS+=nxFileInventory
 PROVIDERS+=nxOMSAutomationWorker
 endif
+
+#List of Providers for DSC that are not in OMS
+DSCPROVIDERS:=nxScript
+DSCPROVIDERS+=nxFile
+DSCPROVIDERS+=nxFileLine
+DSCPROVIDERS+=nxArchive
+DSCPROVIDERS+=nxEnvironment
+DSCPROVIDERS+=nxSshAuthorizedKeys
 
 # this is used to enable the printing of xml style tags for help in debugging
 PRINT_BOOKENDS?=0
